@@ -15,7 +15,7 @@ int main() {
     vector<int> V = { 0,1,2,3,4 };
     print();
 
-    for_each(begin(V), end(V),  [=](int element)
+    for_each(begin(V), end(V), [=](int element)
         mutable
         {
             x += element;
@@ -25,12 +25,12 @@ int main() {
 
     print();
 
-    
+
 
     vector<int> T(V.size());
 
     transform(begin(V), end(V), begin(T), [](int element) {
-        return element *=2;
+        return element *= 2;
         });
 
 

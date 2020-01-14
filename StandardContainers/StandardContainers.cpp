@@ -12,11 +12,11 @@ class Res {
 private:
     string name;
 public:
-    Res(string name):name(name) {
+    Res(string name) :name(name) {
         cout << "constructing " << name << "\n";
     }
 
-    Res(const Res& res):name(res.name)  {
+    Res(const Res& res) :name(res.name) {
         cout << "copy constructing " << name << "\n";
     }
     ~Res() {
@@ -27,17 +27,17 @@ public:
 int main()
 {
     vector<Res> V;
-    
+
     for (int i = 0; i < 5; ++i) {
         std::string s = std::to_string(i);
         V.push_back(Res(s));
         cout << "-------------\n";
-    
+
     }
     cout << "\nloop finished\n";
-    
+
     list<Res> L;
-  
+
     for (int i = 0; i < 5; ++i) {
         std::string s = std::to_string(i);
         L.push_back(Res(s));
