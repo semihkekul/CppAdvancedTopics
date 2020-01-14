@@ -15,14 +15,31 @@ public:
     Res(string name) :name(name) {
         cout << "constructing " << name << "\n";
     }
-    Res& operator=(const Res& res) {
-        name = res.name;
-        cout << "= operating " << name << "\n";
-        return *this;
-    }
+
     Res(const Res& res) :name(res.name) {
         cout << "copy constructing " << name << "\n";
     }
+
+    Res& operator=(const Res& res)  {
+        name = res.name;
+        cout << "= operating " << name << "\n";
+    }
+
+    Res(Res&& res) :name(std::move(res.name)) {
+        cout << "move constructing " << name << "\n";
+    }
+
+    Res& operator=(Res&& res) {
+        if (this != &res)
+        {
+            name = std::move(res.name);
+            res.name.clear();
+        }
+        
+        cout << "= operating " << name << "\n";
+        return *this;
+    }
+
     ~Res() {
         cout << "destructing " << name << "\n";
     }
