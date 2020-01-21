@@ -23,6 +23,7 @@
     <ProjectGuid>{62B9DB8E-9E72-4946-99E0-37CF4CFFF76B}</ProjectGuid>
     <RootNamespace>Pimple</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Pimpl</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
